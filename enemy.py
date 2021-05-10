@@ -1,7 +1,7 @@
 import pygame
 from settings import *
 
-class David:
+class Mauzi:
     def __init__(self, screen, x, y):
         self.screen = screen
         self.i = 0
@@ -24,7 +24,7 @@ class David:
             pygame.draw.rect(self.screen, RED, (self.rect.x, self.rect.y - 20, round(GAP*.6)*(self.hp/self.max_hp), 10))
 
 
-class Pelle:
+class Smogmog:
     def __init__(self, screen, x, y):
         self.screen = screen
         self.i = 0
@@ -47,7 +47,7 @@ class Pelle:
 
 
 
-class Dillon:
+class Woingenau:
     def __init__(self, screen, x, y):
         self.screen = screen
         self.i = 0

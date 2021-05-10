@@ -99,17 +99,17 @@ class TD:
         pygame.time.set_timer(self.spawn_enemy_event, round(2800/self.multiplier))
         pygame.time.set_timer(self.tower_fire_event, 200)
 
-        self.wave1 = [David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
-        David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
-        David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
-        David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Pelle(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)]
+        self.wave1 = [Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
+        Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
+        Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
+        Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Smogmog(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)]
 
-        # self.wave2 = [David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
-        # David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Pelle(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
-        # Pelle(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
-        # David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Pelle(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)]
+        # self.wave2 = [Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
+        # Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Smogmog(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
+        # Smogmog(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2),
+        # Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Smogmog(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)]
 
-        # self.wave3 = [Dillon(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Dillon(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)]
+        # self.wave3 = [Woingenau(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2), Woingenau(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)]
         # self.wave4 = []
         # self.wave5 = []
 
@@ -263,19 +263,19 @@ class TD:
         elif self.wave > 1:
             rEnemy = random.randint(1, 3)
             if rEnemy == 1:
-                spawn = David(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)
+                spawn = Mauzi(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)
                 spawn.max_hp *= self.multiplier
                 spawn.hp *= self.multiplier
                 self.enemies.append(spawn)
 
             if rEnemy == 2:
-                spawn = Pelle(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)
+                spawn = Smogmog(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)
                 spawn.max_hp *= self.multiplier
                 spawn.hp *= self.multiplier
                 self.enemies.append(spawn)
 
             if rEnemy == 3:
-                spawn = Dillon(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)
+                spawn = Woingenau(self.screen, self.pathway[0].x+GAP//2, self.pathway[0].y+GAP//2)
                 spawn.max_hp *= self.multiplier
                 spawn.hp *= self.multiplier
                 self.enemies.append(spawn)
